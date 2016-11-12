@@ -39,8 +39,8 @@ void setup() {
   setupTimers();
   setupPins();
   
-  // Initiate MIDI communications, listen to all channels
-  MIDI.begin(1);    
+  // Initiate MIDI communications, listen to channel MIDI_CHANNEL_IN
+  MIDI.begin();
     
   // Setup MIDI callback functions
   MIDI.setHandleNoteOn(HandleNoteOn);  // Put only the name of the function
