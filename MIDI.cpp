@@ -575,7 +575,7 @@ bool MIDI_Class::parse(byte inChannel)
 				case TuneRequest:
 					// Handle the message type directly here.
 					mMessage.type = getTypeFromStatusByte(mPendingMessage[0]);
-					mMessage.channel = (mPendingMessage[0] & 0x0F);
+					mMessage.channel = (mPendingMessage[0] & 0x0F) + 1;
 					mMessage.data1 = 0;
 					mMessage.data2 = 0;
 					mMessage.valid = true;
@@ -724,7 +724,7 @@ bool MIDI_Class::parse(byte inChannel)
 
 
 				mMessage.type = getTypeFromStatusByte(mPendingMessage[0]);
-				mMessage.channel = (mPendingMessage[0] & 0x0F); // Don't check if it is a Channel Message
+				mMessage.channel = (mPendingMessage[0] & 0x0F) + 1; // Don't check if it is a Channel Message
 
 				mMessage.data1 = mPendingMessage[1];
 
