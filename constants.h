@@ -11,10 +11,10 @@
 /****Coil-dependent configuration variables: change these to match your coil****/
 
 //multiply the pulsewidths by this constant, good for quick 'n dirty scaling
-#define LOOKUP_TABLE_SCALE 3
+#define LOOKUP_TABLE_SCALE 2
 
 //minimum on-time, in microseconds
-#define MIN_ON_TIME 10
+#define MIN_ON_TIME 5
 
 //on-times in microseconds, don't forget to multiply by LOOKUP_TABLE_SCALE!
 #define ON_TIME_ARRAY_LENGTH 20
